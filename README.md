@@ -122,7 +122,10 @@ echo $PATH
 Se não estiver, adicione o caminho manualmente:
 
 export PATH=$PATH:/usr/local/bin
-Permissões: Certifique-se de que você tem permissões de root para executar o script e instalar pacotes no sistema.
+
+**Permissões**
+
+Certifique-se de que você tem permissões de root para executar o script e instalar pacotes no sistema.
 
 ## Contribuições
 
