@@ -52,68 +52,82 @@ OS: Linux
 
 ## O que o script faz
 
-Instala as dependências
+**Instala as dependências**
 
 O script instala curl, php-cli, php-mbstring e git, que são necessários para o funcionamento do WP-CLI.
 
 **Baixa o WP-CLI**
 
 O script baixa o arquivo cli.php diretamente do repositório oficial do WP-CLI.
-Move o arquivo para o diretório de execução: O script move o arquivo baixado para o diretório /usr/local/bin/, garantindo que o WP-CLI seja acessível de qualquer lugar no sistema.
-Torna o WP-CLI executável: Ele torna o arquivo baixado executável com o comando chmod +x.
-Verifica a instalação: Após a instalação, o script executa o comando wp --info para verificar se o WP-CLI foi instalado corretamente.
-Sistemas Operacionais Compatíveis
+
+**Move o arquivo para o diretório de execução**
+
+O script move o arquivo baixado para o diretório /usr/local/bin/, garantindo que o WP-CLI seja acessível de qualquer lugar no sistema.
+
+**Torna o WP-CLI executável** Ele torna o arquivo baixado executável com o comando chmod +x.
+
+**Verifica a instalação** Após a instalação, o script executa o comando wp --info para verificar se o WP-CLI foi instalado corretamente.
+
+## Sistemas Operacionais Compatíveis
 
 Este script foi desenvolvido para funcionar em servidores que utilizam sistemas operacionais baseados em yum, como:
 
 CentOS
 RHEL (Red Hat Enterprise Linux)
 CloudLinux
+
 Se você estiver usando outra distribuição Linux (como Ubuntu, Debian ou outras), o script pode precisar de ajustes, como o uso de apt no lugar de yum.
 
-Como Usar o WP-CLI
+**Como Usar o WP-CLI**
 
 Após a instalação, você pode usar o WP-CLI para gerenciar seus sites WordPress diretamente do terminal. Aqui estão alguns comandos úteis:
 
-Exemplo 1: Instalar um plugin
+**Exemplo 1: Instalar um plugin**
+
 wp plugin install jetpack --activate
 Este comando instala o plugin "Jetpack" e o ativa automaticamente.
 
-Exemplo 2: Atualizar o WordPress
+**Exemplo 2: Atualizar o WordPress**
+
 wp core update
 Este comando atualiza o WordPress para a versão mais recente.
 
-Exemplo 3: Criar um novo usuário
+**Exemplo 3: Criar um novo usuário**
+
 wp user create user@example.com --role=administrator --user_pass=senha123
 Este comando cria um novo usuário com o e-mail user@example.com, atribui o papel de administrador e define a senha senha123.
 
-Exemplo 4: Instalar e ativar um tema
+**Exemplo 4: Instalar e ativar um tema**
+
 wp theme install twentytwenty --activate
 Este comando instala o tema "Twenty Twenty" e o ativa.
 
-Exemplo 5: Atualizar plugins
+**Exemplo 5: Atualizar plugins**
+
 wp plugin update --all
 Este comando atualiza todos os plugins instalados para suas versões mais recentes.
 
-Exemplo 6: Exibir informações do site
+**Exemplo 6: Exibir informações do site**
+
 wp core version
 Este comando exibe a versão atual do WordPress instalada no site.
 
-Solução de Problemas
+## Solução de Problemas
 
-WP-CLI não encontrado: Se o comando wp não funcionar após a instalação, tente verificar se o diretório /usr/local/bin/ está no seu PATH:
+**WP-CLI não encontrado**
+
+Se o comando wp não funcionar após a instalação, tente verificar se o diretório /usr/local/bin/ está no seu PATH:
 echo $PATH
+
 Se não estiver, adicione o caminho manualmente:
 
 export PATH=$PATH:/usr/local/bin
 Permissões: Certifique-se de que você tem permissões de root para executar o script e instalar pacotes no sistema.
-Contribuições
+
+## Contribuições
 
 Se você encontrar problemas ou desejar contribuir com melhorias para este script, fique à vontade para abrir uma issue ou enviar um pull request.
 
-Licença
+## Licença
 
 Este script está licenciado sob a MIT License.
-
-
-Agora, o link para o repositório foi incluído na introdução do README, permitindo que os usuários saibam de onde o script pode ser baixado diretamente, e as instruções estão claras e completas.
